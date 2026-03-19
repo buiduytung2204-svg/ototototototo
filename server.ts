@@ -183,9 +183,14 @@ async function startServer() {
     });
   }
 
-  app.listen(PORT, '0.0.0.0', () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+  // Thay thế đoạn app.listen và startServer() cũ:
+
+if (process.env.NODE_ENV !== 'production') {
+  startServer().then(() => {
+    app.listen(PORT, '0.0.0.0', () => {
+      console.log(`Server running on http://localhost:${PORT}`);
+    });
   });
 }
 
-startServer();
+export default app;
