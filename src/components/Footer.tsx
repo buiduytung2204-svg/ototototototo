@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-1">
             <Link to="/" className="flex items-center gap-2 mb-6">
               <Car className="h-8 w-8 text-white" />
-              <span className="text-2xl font-bold tracking-wider uppercase">Tungauto</span>
+              <span className="text-2xl font-bold tracking-wider uppercase">TungAuto</span>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
               Đại lý xe hơi sang trọng hàng đầu, cung cấp những mẫu xe đẳng cấp nhất từ các thương hiệu danh tiếng trên thế giới.
@@ -64,7 +64,7 @@ export default function Footer() {
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} LuxeAuto. All rights reserved.
+            &copy; {new Date().getFullYear()} TungAuto. All rights reserved.
           </p>
           <div className="flex space-x-6">
             <a href="#" className="text-gray-500 hover:text-white text-sm transition-colors">Chính sách bảo mật</a>
