@@ -58,7 +58,7 @@ export default function Contact() {
           },
           body: JSON.stringify({
             // Thay 'YOUR_WEB3FORMS_ACCESS_KEY' bằng Access Key thực tế của bạn lấy từ https://web3forms.com/
-            access_key: 'YOUR_WEB3FORMS_ACCESS_KEY', 
+            access_key: 'fc6f3359-6a87-4091-b07f-b5b78d231f06', 
             name: formData.name,
             phone: formData.phone,
             message: formData.message,
