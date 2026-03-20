@@ -14,6 +14,7 @@ export default function Contact() {
     message: ''
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const validateForm = () => {
     let isValid = true;
@@ -42,13 +43,47 @@ export default function Contact() {
     return isValid;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (validateForm()) {
-      // Giả lập gửi form thành công
-      setIsSubmitted(true);
-      setFormData({ name: '', phone: '', message: '' });
-      setTimeout(() => setIsSubmitted(false), 5000);
+      setIsSubmitting(true);
+      
+      try {
+        // Gửi dữ liệu qua Web3Forms API (Không cần backend)
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify({
+            // Thay 'YOUR_WEB3FORMS_ACCESS_KEY' bằng Access Key thực tế của bạn lấy từ https://web3forms.com/
+            access_key: 'YOUR_WEB3FORMS_ACCESS_KEY', 
+            name: formData.name,
+            phone: formData.phone,
+            message: formData.message,
+            subject: `Yêu cầu tư vấn mới từ ${formData.name}`,
+            from_name: 'TungAuto Website'
+          }),
+        });
+
+        const result = await response.json();
+        
+        if (result.success) {
+          setIsSubmitted(true);
+          setFormData({ name: '', phone: '', message: '' });
+          setTimeout(() => setIsSubmitted(false), 5000);
+        } else {
+          // Nếu bạn chưa thay Access Key, form sẽ báo lỗi ở đây
+          console.error('Web3Forms Error:', result);
+          alert('Có lỗi xảy ra (Có thể do chưa cấu hình Access Key). Vui lòng kiểm tra lại.');
+        }
+      } catch (error) {
+        console.error('Error submitting form:', error);
+        alert('Có lỗi xảy ra khi kết nối. Vui lòng thử lại sau.');
+      } finally {
+        setIsSubmitting(false);
+      }
     }
   };
 
@@ -213,10 +248,11 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="w-full inline-flex items-center justify-center px-8 py-4 text-base font-bold text-black bg-white hover:bg-gray-200 transition-colors rounded-xl group uppercase tracking-wider"
+                disabled={isSubmitting}
+                className="w-full inline-flex items-center justify-center px-8 py-4 text-base font-bold text-black bg-white hover:bg-gray-200 transition-colors rounded-xl group uppercase tracking-wider disabled:opacity-70 disabled:cursor-not-allowed"
               >
-                Gửi yêu cầu
-                <Send className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                {isSubmitting ? 'Đang gửi...' : 'Gửi yêu cầu'}
+                {!isSubmitting && <Send className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />}
               </button>
             </form>
           </motion.div>
