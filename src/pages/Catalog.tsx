@@ -4,6 +4,7 @@ import { Search, Filter, X } from 'lucide-react';
 import { motion } from 'motion/react';
 import CarCard from '../components/CarCard';
 import { Car } from '../types';
+import { mockCars } from '../data/cars';
 
 export default function Catalog() {
   const [cars, setCars] = useState<Car[]>([]);
@@ -19,19 +20,16 @@ export default function Catalog() {
   const initialBrand = queryParams.get('brand') || 'All';
 
   useEffect(() => {
-    fetch('/api/cars')
-      .then(res => res.json())
-      .then(data => {
-        setCars(data);
-        setLoading(false);
-        if (initialBrand !== 'All') {
-          setSelectedBrand(initialBrand);
-        }
-      })
-      .catch(err => {
-        console.error('Failed to fetch cars:', err);
-        setLoading(false);
-      });
+    // Simulate network request
+    const timer = setTimeout(() => {
+      setCars(mockCars);
+      setLoading(false);
+      if (initialBrand !== 'All') {
+        setSelectedBrand(initialBrand);
+      }
+    }, 500);
+
+    return () => clearTimeout(timer);
   }, [initialBrand]);
 
   useEffect(() => {

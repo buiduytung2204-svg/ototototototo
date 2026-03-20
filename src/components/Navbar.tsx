@@ -24,7 +24,7 @@ export default function Navbar() {
           <div className="flex items-center">
             <Link to="/" className="flex items-center gap-2">
               <Car className="h-8 w-8 text-white" />
-              <span className="text-2xl font-bold tracking-wider uppercase">LuxeAuto</span>
+              <span className="text-2xl font-bold tracking-wider uppercase">TungAuto</span>
             </Link>
           </div>
 

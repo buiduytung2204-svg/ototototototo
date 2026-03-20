@@ -4,6 +4,7 @@ import { motion } from 'motion/react';
 import { ArrowLeft, Heart, Scale, CheckCircle2, ChevronRight, ChevronLeft } from 'lucide-react';
 import { Car } from '../types';
 import { useAppContext } from '../context/AppContext';
+import { mockCars } from '../data/cars';
 
 export default function CarDetails() {
   const { id } = useParams<{ id: string }>();
@@ -13,16 +14,14 @@ export default function CarDetails() {
   const { addToWishlist, removeFromWishlist, isInWishlist, addToCompare, removeFromCompare, isInCompare } = useAppContext();
 
   useEffect(() => {
-    fetch(`/api/cars/${id}`)
-      .then(res => res.json())
-      .then(data => {
-        setCar(data);
-        setLoading(false);
-      })
-      .catch(err => {
-        console.error('Failed to fetch car details:', err);
-        setLoading(false);
-      });
+    // Simulate network request
+    const timer = setTimeout(() => {
+      const foundCar = mockCars.find(c => c.id === id);
+      setCar(foundCar || null);
+      setLoading(false);
+    }, 500);
+
+    return () => clearTimeout(timer);
   }, [id]);
 
   if (loading) {

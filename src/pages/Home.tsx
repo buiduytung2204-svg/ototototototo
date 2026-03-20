@@ -108,7 +108,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-wider mb-4">Đánh giá khách hàng</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto font-light">Những trải nghiệm thực tế từ các khách hàng VIP đã tin tưởng và lựa chọn LuxeAuto.</p>
+            <p className="text-gray-400 max-w-2xl mx-auto font-light">Những trải nghiệm thực tế từ các khách hàng VIP đã tin tưởng và lựa chọn TungAuto.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -116,19 +116,19 @@ export default function Home() {
               {
                 name: 'Nguyễn Văn A',
                 role: 'Doanh nhân',
-                content: 'Dịch vụ tại LuxeAuto thực sự đẳng cấp. Tôi rất hài lòng với chiếc Mercedes S-Class mới mua. Quá trình tư vấn và giao xe diễn ra cực kỳ chuyên nghiệp.',
+                content: 'Dịch vụ tại TungAuto thực sự đẳng cấp. Tôi rất hài lòng với chiếc Mercedes S-Class mới mua. Quá trình tư vấn và giao xe diễn ra cực kỳ chuyên nghiệp.',
                 avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=200'
               },
               {
                 name: 'Trần Thị B',
                 role: 'Giám đốc sáng tạo',
-                content: 'Tôi đã tìm kiếm chiếc Porsche 911 màu đỏ này rất lâu. Cảm ơn LuxeAuto đã hỗ trợ nhập khẩu và hoàn thiện thủ tục nhanh chóng hơn mong đợi.',
+                content: 'Tôi đã tìm kiếm chiếc Porsche 911 màu đỏ này rất lâu. Cảm ơn TungAuto đã hỗ trợ nhập khẩu và hoàn thiện thủ tục nhanh chóng hơn mong đợi.',
                 avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200'
               },
               {
                 name: 'Lê Hoàng C',
                 role: 'CEO Tech Company',
-                content: 'Không chỉ bán xe, LuxeAuto còn mang đến một phong cách sống. Các sự kiện tri ân khách hàng và dịch vụ hậu mãi ở đây luôn làm tôi ấn tượng.',
+                content: 'Không chỉ bán xe, TungAuto còn mang đến một phong cách sống. Các sự kiện tri ân khách hàng và dịch vụ hậu mãi ở đây luôn làm tôi ấn tượng.',
                 avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200'
               }
             ].map((testimonial, i) => (

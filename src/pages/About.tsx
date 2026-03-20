@@ -33,7 +33,7 @@ export default function About() {
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&q=80&w=2000"
-            alt="LuxeAuto Showroom"
+            alt="TungAuto Showroom"
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
           />
@@ -47,7 +47,7 @@ export default function About() {
             transition={{ duration: 0.8 }}
           >
             <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase mb-4">Về chúng tôi</p>
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-6">LuxeAuto</h1>
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-6">TungAuto</h1>
             <p className="text-xl text-gray-300 font-light max-w-2xl mx-auto">
               Biểu tượng của sự hoàn mỹ và đẳng cấp trong thế giới xe hơi sang trọng.
             </p>
@@ -67,10 +67,8 @@ export default function About() {
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-8 uppercase tracking-wider">Lịch sử hình thành</h2>
               <p className="text-gray-400 text-lg leading-relaxed mb-6 font-light">
-                Được thành lập vào năm 2014, LuxeAuto bắt đầu từ một showroom nhỏ với niềm đam mê mãnh liệt dành cho những cỗ máy tốc độ hoàn hảo. Trải qua một thập kỷ phát triển, chúng tôi tự hào trở thành điểm đến tin cậy của giới tinh hoa.
-              </p>
-              <p className="text-gray-400 text-lg leading-relaxed mb-12 font-light">
-                Mỗi chiếc xe tại LuxeAuto không chỉ là một phương tiện di chuyển, mà còn là một tác phẩm nghệ thuật, một tuyên ngôn về phong cách sống và sự thành đạt của chủ nhân.
+                Được thành lập vào năm 2014, TungAuto bắt đầu từ một showroom nhỏ với niềm đam mê mãnh liệt dành cho những cỗ máy tốc độ hoàn hảo. Trải qua một thập kỷ phát triển, chúng tôi tự hào trở thành điểm đến tin cậy của giới tinh hoa.
+                Mỗi chiếc xe tại TungAuto không chỉ là một phương tiện di chuyển, mà còn là một tác phẩm nghệ thuật, một tuyên ngôn về phong cách sống và sự thành đạt của chủ nhân.
               </p>
 
               <h2 className="text-3xl md:text-4xl font-bold mb-8 uppercase tracking-wider">Sứ mệnh & Tầm nhìn</h2>
@@ -99,7 +97,7 @@ export default function About() {
             >
               <img
                 src="https://images.unsplash.com/photo-1562141960-91896d928ce6?auto=format&fit=crop&q=80&w=1000"
-                alt="LuxeAuto Interior"
+                alt="TungAuto Interior"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />
@@ -113,7 +111,7 @@ export default function About() {
       <section className="py-24 bg-zinc-950 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-wider mb-4">Tại sao chọn LuxeAuto?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-wider mb-4">Tại sao chọn TungAuto?</h2>
             <p className="text-gray-400 max-w-2xl mx-auto font-light">Chúng tôi không chỉ bán xe, chúng tôi trao gửi những giá trị đẳng cấp và sự an tâm tuyệt đối.</p>
           </div>
 

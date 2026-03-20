@@ -54,9 +54,9 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-6 uppercase tracking-wider">Liên hệ</h3>
             <ul className="space-y-4 text-sm text-gray-400">
-              <li>Vạn Phúc Building, Đường Tố Hữu, Hà Đông, Hà Nội</li>
-              <li>Hotline: 0971278459</li>
-              <li>Email: buiduytung2204@gmail.com</li>
+              <li>123 Đường Nguyễn Văn Linh, Quận 7, TP.HCM</li>
+              <li>Hotline: 1900 1234</li>
+              <li>Email: info@tungauto.vn</li>
               <li>Giờ làm việc: 8:00 - 18:00 (T2 - CN)</li>
             </ul>
           </div>

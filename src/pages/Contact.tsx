@@ -66,7 +66,7 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase mb-4">Liên hệ</p>
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-6">Kết nối với LuxeAuto</h1>
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-6">Kết nối với TungAuto</h1>
           <p className="text-xl text-gray-400 font-light max-w-2xl mx-auto">
             Chúng tôi luôn sẵn sàng lắng nghe và hỗ trợ bạn tìm kiếm chiếc xe mơ ước.
           </p>
@@ -117,8 +117,8 @@ export default function Contact() {
                 <div>
                   <h3 className="text-lg font-bold uppercase tracking-wider mb-2">Email</h3>
                   <p className="text-gray-400 font-light leading-relaxed">
-                    <a href="mailto:info@luxeauto.vn" className="hover:text-white transition-colors">info@luxeauto.vn</a><br />
-                    <a href="mailto:support@luxeauto.vn" className="hover:text-white transition-colors">support@luxeauto.vn</a>
+                    <a href="mailto:info@tungauto.vn" className="hover:text-white transition-colors">info@tungauto.vn</a><br />
+                    <a href="mailto:support@tungauto.vn" className="hover:text-white transition-colors">support@tungauto.vn</a>
                   </p>
                 </div>
               </div>
@@ -164,7 +164,7 @@ export default function Contact() {
             {isSubmitted ? (
               <div className="bg-emerald-500/10 border border-emerald-500 text-emerald-400 p-6 rounded-xl mb-8">
                 <h3 className="text-xl font-bold mb-2">Cảm ơn bạn!</h3>
-                <p>Yêu cầu tư vấn của bạn đã được gửi thành công. Đội ngũ LuxeAuto sẽ liên hệ lại trong thời gian sớm nhất.</p>
+                <p>Yêu cầu tư vấn của bạn đã được gửi thành công. Đội ngũ TungAuto sẽ liên hệ lại trong thời gian sớm nhất.</p>
               </div>
             ) : null}
 
