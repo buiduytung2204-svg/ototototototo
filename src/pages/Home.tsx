@@ -4,22 +4,20 @@ import { motion } from 'motion/react';
 import { ArrowRight, ChevronRight } from 'lucide-react';
 import CarCard from '../components/CarCard';
 import { Car } from '../types';
+import { mockCars } from '../data/cars';
 
 export default function Home() {
   const [featuredCars, setFeaturedCars] = useState<Car[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/api/cars')
-      .then(res => res.json())
-      .then(data => {
-        setFeaturedCars(data.slice(0, 6)); // Show first 6 cars
-        setLoading(false);
-      })
-      .catch(err => {
-        console.error('Failed to fetch cars:', err);
-        setLoading(false);
-      });
+    // Simulate API delay
+    const timer = setTimeout(() => {
+      setFeaturedCars(mockCars.slice(0, 6)); // Show first 6 cars
+      setLoading(false);
+    }, 500);
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (

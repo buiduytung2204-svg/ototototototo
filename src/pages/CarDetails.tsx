@@ -14,7 +14,7 @@ export default function CarDetails() {
   const { addToWishlist, removeFromWishlist, isInWishlist, addToCompare, removeFromCompare, isInCompare } = useAppContext();
 
   useEffect(() => {
-    // Simulate network request
+    // Simulate API delay
     const timer = setTimeout(() => {
       const foundCar = mockCars.find(c => c.id === id);
       setCar(foundCar || null);

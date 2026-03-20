@@ -20,7 +20,7 @@ export default function Catalog() {
   const initialBrand = queryParams.get('brand') || 'All';
 
   useEffect(() => {
-    // Simulate network request
+    // Simulate API delay
     const timer = setTimeout(() => {
       setCars(mockCars);
       setLoading(false);
