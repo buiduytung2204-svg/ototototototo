@@ -5,6 +5,7 @@
 
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import { AppProvider } from './context/AppContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -37,6 +38,7 @@ export default function App() {
           <Footer />
           <FloatingContact />
         </div>
+        <Analytics />
       </Router>
     </AppProvider>
   );
