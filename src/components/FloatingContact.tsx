@@ -24,18 +24,20 @@ export default function FloatingContact() {
       {/* Floating Buttons */}
       <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
         <a
-          href="tel:19001234"
+          href="tel:0971278459"
           className="bg-emerald-500 hover:bg-emerald-600 text-white p-4 rounded-full shadow-lg shadow-emerald-500/20 transition-transform hover:scale-110 flex items-center justify-center group relative"
           title="Gọi ngay"
         >
           <Phone className="h-6 w-6" />
           <span className="absolute right-full mr-4 bg-black text-white text-sm px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-            Gọi ngay: 1900 1234
+            Gọi ngay: 0971 278 459
           </span>
         </a>
         
-        <button
-          onClick={() => setIsPopupOpen(true)}
+        <a
+          href="https://zalo.me/0962363406"
+          target="_blank"
+          rel="noopener noreferrer"
           className="bg-indigo-500 hover:bg-indigo-600 text-white p-4 rounded-full shadow-lg shadow-indigo-500/20 transition-transform hover:scale-110 flex items-center justify-center group relative"
           title="Chat tư vấn"
         >
@@ -43,7 +45,7 @@ export default function FloatingContact() {
           <span className="absolute right-full mr-4 bg-black text-white text-sm px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
             Chat tư vấn (Zalo)
           </span>
-        </button>
+        </a>
       </div>
 
       {/* Quick Consultation Popup */}

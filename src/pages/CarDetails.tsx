@@ -173,8 +173,8 @@ export default function CarDetails() {
                 </div>
               </div>
 
-              <a href="tel:19001234" className="w-full flex items-center justify-center bg-white text-black font-bold py-4 rounded-xl hover:bg-gray-200 transition-colors mb-4 text-lg">
-                Gọi ngay: 1900 1234
+              <a href="tel:0971278459" className="w-full flex items-center justify-center bg-white text-black font-bold py-4 rounded-xl hover:bg-gray-200 transition-colors mb-4 text-lg">
+                Gọi ngay: 0971 278 459
               </a>
               
               <div className="grid grid-cols-2 gap-4">

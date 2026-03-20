@@ -16,10 +16,10 @@ export default function Footer() {
               Đại lý xe hơi sang trọng hàng đầu, cung cấp những mẫu xe đẳng cấp nhất từ các thương hiệu danh tiếng trên thế giới.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors" title="Facebook">
+              <a href="https://www.facebook.com/dtung2204" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors" title="Facebook">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors" title="Zalo">
+              <a href="https://zalo.me/0962363406" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors" title="Zalo">
                 <MessageCircle className="h-5 w-5" />
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors" title="Instagram">
@@ -54,9 +54,10 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-6 uppercase tracking-wider">Liên hệ</h3>
             <ul className="space-y-4 text-sm text-gray-400">
-              <li>123 Đường Nguyễn Văn Linh, Quận 7, TP.HCM</li>
-              <li>Hotline: 1900 1234</li>
-              <li>Email: info@tungauto.vn</li>
+              <li>Vạn Phúc Building, Đường Tố Hữu, Hà Đông, Hà Nội</li>
+              <li>Hotline: 0971 278 459</li>
+              <li>Zalo: 0962 363 406</li>
+              <li>Email: buiduytung2204@gmail.com</li>
               <li>Giờ làm việc: 8:00 - 18:00 (T2 - CN)</li>
             </ul>
           </div>

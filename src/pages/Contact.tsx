@@ -58,7 +58,7 @@ export default function Contact() {
           },
           body: JSON.stringify({
             // Thay 'YOUR_WEB3FORMS_ACCESS_KEY' bằng Access Key thực tế của bạn lấy từ https://web3forms.com/
-            access_key: 'fc6f3359-6a87-4091-b07f-b5b78d231f06', 
+            access_key: 'YOUR_WEB3FORMS_ACCESS_KEY', 
             name: formData.name,
             phone: formData.phone,
             message: formData.message,
@@ -123,8 +123,8 @@ export default function Contact() {
                 <div>
                   <h3 className="text-lg font-bold uppercase tracking-wider mb-2">Địa chỉ</h3>
                   <p className="text-gray-400 font-light leading-relaxed">
-                    123 Đường Nguyễn Văn Linh<br />
-                    Quận 7, TP. Hồ Chí Minh<br />
+                    Vạn Phúc Building, Đường Tố Hữu<br />
+                    Hà Đông, Hà Nội<br />
                     Việt Nam
                   </p>
                 </div>
@@ -138,9 +138,9 @@ export default function Contact() {
                   <h3 className="text-lg font-bold uppercase tracking-wider mb-2">Hotline</h3>
                   <p className="text-gray-400 font-light leading-relaxed">
                     Tư vấn bán hàng:<br />
-                    <a href="tel:19001234" className="text-white hover:underline">1900 1234</a><br />
-                    Hỗ trợ kỹ thuật:<br />
-                    <a href="tel:19005678" className="text-white hover:underline">1900 5678</a>
+                    <a href="tel:0971278459" className="text-white hover:underline">0971 278 459</a><br />
+                    Zalo:<br />
+                    <a href="https://zalo.me/0962363406" target="_blank" rel="noopener noreferrer" className="text-white hover:underline">0962 363 406</a>
                   </p>
                 </div>
               </div>
@@ -152,8 +152,7 @@ export default function Contact() {
                 <div>
                   <h3 className="text-lg font-bold uppercase tracking-wider mb-2">Email</h3>
                   <p className="text-gray-400 font-light leading-relaxed">
-                    <a href="mailto:info@tungauto.vn" className="hover:text-white transition-colors">info@tungauto.vn</a><br />
-                    <a href="mailto:support@tungauto.vn" className="hover:text-white transition-colors">support@tungauto.vn</a>
+                    <a href="mailto:buiduytung2204@gmail.com" className="hover:text-white transition-colors">buiduytung2204@gmail.com</a>
                   </p>
                 </div>
               </div>
@@ -175,7 +174,7 @@ export default function Contact() {
             {/* Google Maps iframe */}
             <div className="w-full h-80 rounded-2xl overflow-hidden border border-white/10">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.669658423711!2d106.66627331533434!3d10.75992006243916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f9023a3a85d%3A0x9251cb4cdaf1523!2sHo%20Chi%20Minh%20City!5e0!3m2!1sen!2s!4v1625555555555!5m2!1sen!2s"
+                src="https://maps.google.com/maps?q=V%E1%BA%A1n%20Ph%C3%BAc%20Building,%20%C4%90%C6%B0%E1%BB%9Dng%20T%E1%BB%91%20H%E1%BB%AFu,%20H%C3%A0%20%C4%90%C3%B4ng,%20H%C3%A0%20N%E1%BB%99i&t=&z=15&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
