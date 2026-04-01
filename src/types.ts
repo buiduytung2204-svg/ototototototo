@@ -9,4 +9,6 @@ export interface Car {
   description: string;
   image: string;
   gallery: string[];
+  isNew?: boolean;
+  isBestSeller?: boolean;
 }

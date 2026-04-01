@@ -85,6 +85,7 @@ export default function CarDetails() {
             src={images[activeImageIndex]}
             alt={`${car.name} view ${activeImageIndex + 1}`}
             className="w-full h-full object-cover"
+            referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           
@@ -116,7 +117,7 @@ export default function CarDetails() {
                   activeImageIndex === index ? 'ring-2 ring-white ring-offset-2 ring-offset-black' : 'opacity-50 hover:opacity-100'
                 }`}
               >
-                <img src={img} alt="" className="w-full h-full object-cover" />
+                <img src={img} alt="" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
               </button>
             ))}
           </div>

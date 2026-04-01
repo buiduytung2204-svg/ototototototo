@@ -32,7 +32,7 @@ export default function About() {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&q=80&w=2000"
+            src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80&w=2000"
             alt="TungAuto Showroom"
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
@@ -57,53 +57,35 @@ export default function About() {
 
       {/* History & Mission */}
       <section className="py-24 bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-8 uppercase tracking-wider">Lịch sử hình thành</h2>
-              <p className="text-gray-400 text-lg leading-relaxed mb-6 font-light">
-                Được thành lập vào năm 2014, TungAuto bắt đầu từ một showroom nhỏ với niềm đam mê mãnh liệt dành cho những cỗ máy tốc độ hoàn hảo. Trải qua một thập kỷ phát triển, chúng tôi tự hào trở thành điểm đến tin cậy của giới tinh hoa.
-                Mỗi chiếc xe tại TungAuto không chỉ là một phương tiện di chuyển, mà còn là một tác phẩm nghệ thuật, một tuyên ngôn về phong cách sống và sự thành đạt của chủ nhân.
-              </p>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 uppercase tracking-wider">Lịch sử hình thành</h2>
+            <p className="text-gray-400 text-lg leading-relaxed mb-12 font-light">
+              Được thành lập vào năm 2014, TungAuto bắt đầu từ một showroom nhỏ với niềm đam mê mãnh liệt dành cho những cỗ máy tốc độ hoàn hảo. Trải qua một thập kỷ phát triển, chúng tôi tự hào trở thành điểm đến tin cậy của giới tinh hoa.
+              Mỗi chiếc xe tại TungAuto không chỉ là một phương tiện di chuyển, mà còn là một tác phẩm nghệ thuật, một tuyên ngôn về phong cách sống và sự thành đạt của chủ nhân.
+            </p>
 
-              <h2 className="text-3xl md:text-4xl font-bold mb-8 uppercase tracking-wider">Sứ mệnh & Tầm nhìn</h2>
-              <ul className="space-y-4">
-                <li className="flex items-start gap-4">
-                  <CheckCircle2 className="h-6 w-6 text-white shrink-0 mt-1" />
-                  <p className="text-gray-400 text-lg font-light">Mang đến những mẫu xe sang trọng, độc bản và chất lượng nhất.</p>
-                </li>
-                <li className="flex items-start gap-4">
-                  <CheckCircle2 className="h-6 w-6 text-white shrink-0 mt-1" />
-                  <p className="text-gray-400 text-lg font-light">Cung cấp dịch vụ hậu mãi tiêu chuẩn 5 sao, vượt trên sự mong đợi.</p>
-                </li>
-                <li className="flex items-start gap-4">
-                  <CheckCircle2 className="h-6 w-6 text-white shrink-0 mt-1" />
-                  <p className="text-gray-400 text-lg font-light">Trở thành biểu tượng phân phối xe siêu sang số 1 tại Việt Nam.</p>
-                </li>
-              </ul>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="relative aspect-[4/5] rounded-2xl overflow-hidden"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1562141960-91896d928ce6?auto=format&fit=crop&q=80&w=1000"
-                alt="TungAuto Interior"
-                className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute inset-0 bg-black/20" />
-            </motion.div>
-          </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 uppercase tracking-wider">Sứ mệnh & Tầm nhìn</h2>
+            <ul className="space-y-6 text-left max-w-2xl mx-auto">
+              <li className="flex items-start gap-4">
+                <CheckCircle2 className="h-6 w-6 text-white shrink-0 mt-1" />
+                <p className="text-gray-400 text-lg font-light">Mang đến những mẫu xe sang trọng, độc bản và chất lượng nhất.</p>
+              </li>
+              <li className="flex items-start gap-4">
+                <CheckCircle2 className="h-6 w-6 text-white shrink-0 mt-1" />
+                <p className="text-gray-400 text-lg font-light">Cung cấp dịch vụ hậu mãi tiêu chuẩn 5 sao, vượt trên sự mong đợi.</p>
+              </li>
+              <li className="flex items-start gap-4">
+                <CheckCircle2 className="h-6 w-6 text-white shrink-0 mt-1" />
+                <p className="text-gray-400 text-lg font-light">Trở thành biểu tượng phân phối xe siêu sang số 1 tại Việt Nam.</p>
+              </li>
+            </ul>
+          </motion.div>
         </div>
       </section>
 

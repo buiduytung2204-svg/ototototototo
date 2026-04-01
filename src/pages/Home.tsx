@@ -8,17 +8,29 @@ import { mockCars } from '../data/cars';
 
 export default function Home() {
   const [featuredCars, setFeaturedCars] = useState<Car[]>([]);
+  const [bestSellingCars, setBestSellingCars] = useState<Car[]>([]);
+  const [newCars, setNewCars] = useState<Car[]>([]);
   const [loading, setLoading] = useState(true);
+
+  const [showAllFeatured, setShowAllFeatured] = useState(false);
+  const [showAllBestSelling, setShowAllBestSelling] = useState(false);
+  const [showAllNew, setShowAllNew] = useState(false);
 
   useEffect(() => {
     // Simulate API delay
     const timer = setTimeout(() => {
-      setFeaturedCars(mockCars.slice(0, 6)); // Show first 6 cars
+      setFeaturedCars(mockCars);
+      setBestSellingCars(mockCars.filter(c => c.isBestSeller));
+      setNewCars(mockCars.filter(c => c.isNew));
       setLoading(false);
     }, 500);
 
     return () => clearTimeout(timer);
   }, []);
+
+  const displayedFeatured = showAllFeatured ? featuredCars : featuredCars.slice(0, 4);
+  const displayedBestSelling = showAllBestSelling ? bestSellingCars : bestSellingCars.slice(0, 4);
+  const displayedNew = showAllNew ? newCars : newCars.slice(0, 4);
 
   return (
     <div className="bg-black min-h-screen text-white">
@@ -69,13 +81,13 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">Xe Nổi Bật</h2>
               <p className="text-gray-400 max-w-2xl">Những mẫu xe được yêu thích nhất trong tháng, mang đến trải nghiệm lái tuyệt vời và phong cách sống đẳng cấp.</p>
             </div>
-            <Link
-              to="/catalog"
+            <button
+              onClick={() => setShowAllFeatured(!showAllFeatured)}
               className="hidden md:flex items-center text-sm font-semibold text-white hover:text-gray-300 transition-colors group"
             >
-              Xem tất cả
-              <ChevronRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
+              {showAllFeatured ? 'Thu gọn' : 'Xem tất cả'}
+              <ChevronRight className={`ml-1 h-4 w-4 transition-transform ${showAllFeatured ? 'rotate-90' : 'group-hover:translate-x-1'}`} />
+            </button>
           </div>
 
           {loading ? (
@@ -83,26 +95,106 @@ export default function Home() {
               <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-white"></div>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {featuredCars.map((car) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {displayedFeatured.map((car) => (
                 <CarCard key={car.id} car={car} />
               ))}
             </div>
           )}
 
           <div className="mt-12 text-center md:hidden">
-            <Link
-              to="/catalog"
+            <button
+              onClick={() => setShowAllFeatured(!showAllFeatured)}
               className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white border border-white/20 hover:bg-white/10 transition-colors rounded-full"
             >
-              Xem tất cả xe
-            </Link>
+              {showAllFeatured ? 'Thu gọn' : 'Xem tất cả xe'}
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Best Selling Cars Section */}
+      <section className="py-24 bg-black border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-end mb-16">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">Xe Bán Chạy</h2>
+              <p className="text-gray-400 max-w-2xl">Những mẫu xe được săn đón nhiều nhất, khẳng định đẳng cấp và sự lựa chọn hoàn hảo của khách hàng.</p>
+            </div>
+            <button
+              onClick={() => setShowAllBestSelling(!showAllBestSelling)}
+              className="hidden md:flex items-center text-sm font-semibold text-white hover:text-gray-300 transition-colors group"
+            >
+              {showAllBestSelling ? 'Thu gọn' : 'Xem tất cả'}
+              <ChevronRight className={`ml-1 h-4 w-4 transition-transform ${showAllBestSelling ? 'rotate-90' : 'group-hover:translate-x-1'}`} />
+            </button>
+          </div>
+
+          {loading ? (
+            <div className="flex justify-center items-center h-64">
+              <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-white"></div>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {displayedBestSelling.map((car) => (
+                <CarCard key={car.id} car={car} />
+              ))}
+            </div>
+          )}
+          
+          <div className="mt-12 text-center md:hidden">
+            <button
+              onClick={() => setShowAllBestSelling(!showAllBestSelling)}
+              className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white border border-white/20 hover:bg-white/10 transition-colors rounded-full"
+            >
+              {showAllBestSelling ? 'Thu gọn' : 'Xem tất cả xe'}
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* New Cars Section */}
+      <section className="py-24 bg-zinc-950 border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-end mb-16">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">Xe Mới Về</h2>
+              <p className="text-gray-400 max-w-2xl">Khám phá những siêu phẩm mới nhất vừa cập bến TungAuto, dẫn đầu xu hướng công nghệ và thiết kế.</p>
+            </div>
+            <button
+              onClick={() => setShowAllNew(!showAllNew)}
+              className="hidden md:flex items-center text-sm font-semibold text-white hover:text-gray-300 transition-colors group"
+            >
+              {showAllNew ? 'Thu gọn' : 'Xem tất cả'}
+              <ChevronRight className={`ml-1 h-4 w-4 transition-transform ${showAllNew ? 'rotate-90' : 'group-hover:translate-x-1'}`} />
+            </button>
+          </div>
+
+          {loading ? (
+            <div className="flex justify-center items-center h-64">
+              <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-white"></div>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {displayedNew.map((car) => (
+                <CarCard key={car.id} car={car} />
+              ))}
+            </div>
+          )}
+          
+          <div className="mt-12 text-center md:hidden">
+            <button
+              onClick={() => setShowAllNew(!showAllNew)}
+              className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white border border-white/20 hover:bg-white/10 transition-colors rounded-full"
+            >
+              {showAllNew ? 'Thu gọn' : 'Xem tất cả xe'}
+            </button>
           </div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-24 bg-zinc-950 border-t border-white/5">
+      <section className="py-24 bg-black border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-wider mb-4">Đánh giá khách hàng</h2>
@@ -147,7 +239,7 @@ export default function Home() {
                 </div>
                 <p className="text-gray-300 font-light leading-relaxed mb-8 italic">"{testimonial.content}"</p>
                 <div className="flex items-center gap-4">
-                  <img src={testimonial.avatar} alt={testimonial.name} className="w-12 h-12 rounded-full object-cover" />
+                  <img src={testimonial.avatar} alt={testimonial.name} className="w-12 h-12 rounded-full object-cover" referrerPolicy="no-referrer" />
                   <div>
                     <h4 className="text-white font-bold">{testimonial.name}</h4>
                     <p className="text-gray-500 text-sm">{testimonial.role}</p>
@@ -160,7 +252,7 @@ export default function Home() {
       </section>
 
       {/* Brand Section */}
-      <section className="py-24 bg-black border-t border-white/5">
+      <section className="py-24 bg-zinc-950 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl font-bold tracking-widest uppercase text-gray-500 mb-12">Đối tác thương hiệu</h2>
           <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
