@@ -40,11 +40,11 @@ export const mockCars: Car[] = [
     engine: '3.0L Twin-Turbo Flat-6',
     fuel: 'Gasoline',
     description: 'The iconic Porsche 911 Carrera delivers thrilling performance, timeless design, and everyday usability.',
-    image: 'https://unsplash.com/photos/a-white-sports-car-parked-in-front-of-a-house-ovO43aNu-mY',
+    image: 'https://images.unsplash.com/photo-1680530943583-9b0db80fac69?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     gallery: [
-      'https://images.unsplash.com/photo-1503376713208-b49800115b7b?auto=format&fit=crop&q=80&w=1000'
-      'https://unsplash.com/photos/a-white-sports-car-parked-in-front-of-a-house-ovO43aNu-mY'
-      'https://unsplash.com/photos/a-white-sports-car-parked-in-front-of-a-house-ovO43aNu-mY'
+      'https://images.unsplash.com/photo-1680530943583-9b0db80fac69?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+      'https://images.unsplash.com/photo-1680530943583-9b0db80fac69?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+      'https://images.unsplash.com/photo-1680530943583-9b0db80fac69?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
     ]
   },
   {
