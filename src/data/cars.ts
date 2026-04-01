@@ -40,9 +40,11 @@ export const mockCars: Car[] = [
     engine: '3.0L Twin-Turbo Flat-6',
     fuel: 'Gasoline',
     description: 'The iconic Porsche 911 Carrera delivers thrilling performance, timeless design, and everyday usability.',
-    image: 'https://images.unsplash.com/photo-1503376713208-b49800115b7b?auto=format&fit=crop&q=80&w=2000',
+    image: 'https://unsplash.com/photos/a-white-sports-car-parked-in-front-of-a-house-ovO43aNu-mY',
     gallery: [
       'https://images.unsplash.com/photo-1503376713208-b49800115b7b?auto=format&fit=crop&q=80&w=1000'
+      'https://unsplash.com/photos/a-white-sports-car-parked-in-front-of-a-house-ovO43aNu-mY'
+      'https://unsplash.com/photos/a-white-sports-car-parked-in-front-of-a-house-ovO43aNu-mY'
     ]
   },
   {
